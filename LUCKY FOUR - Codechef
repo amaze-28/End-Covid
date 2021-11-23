@@ -1,0 +1,27 @@
+// [Question link] -  https://www.codechef.com/problems/LUCKFOUR
+
+#include <iostream>
+using namespace std;
+int func(int n){
+    int last;
+    int i=0;
+    while(n>0){
+        last=n%10;
+        if(last==4){
+            i+=1;
+        }
+        n/=10;
+    }
+    return i;
+}
+int main(){
+    int n;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+    }
+    for(int i=0;i<n;i++){
+        cout<<func(a[i])<<endl;
+    }
+}
